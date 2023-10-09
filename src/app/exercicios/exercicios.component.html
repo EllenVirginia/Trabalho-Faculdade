@@ -1,0 +1,56 @@
+<article>
+    <h1> Event Binding </h1>
+    <p [style.backgroundColor]="corDeFundo" [style.color]="fonte" (click)="setCorFonte()" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur exercitationem provident 
+      explicabo maxime vitae ducimus ipsam repudiandae doloribus, necessitatibus autem veniam, architecto 
+      veritatis, perferendis quos totam illo! Quod, dolores neque!
+    </p>
+
+</article>
+
+<article>
+    <h3>Event Binding</h3>
+    <div>
+      
+      Selecione uma Texto:
+      <select #select (change)="0">
+        <option value="txt">ESCOLHA</option>
+        <option value="texto1">Texto 1</option>
+        <option value="texto2">Texto 2</option>
+        <option value="texto3">Texto 3</option>
+        <option value="texto4">Texto 4</option>
+      </select>
+
+      <!-- Texto 1 -->
+
+      <div [style.display]="select.value == 'texto1' ? 'block' : 'none'">
+        <h3>Texto 1</h3>
+        Inazuma é uma das sete nações de Teyvat. É o arquipélago que venera a Shogun Raiden, a atual Arconte Electro e Deusa 
+        da Eternidade, que também é a líder de seu corpo governante, o Shogunato de Inazuma.
+      </div>
+
+      <!-- Texto 2 -->
+
+      <div  [style.display]="select.value == 'texto2' ? 'block' : 'none'">
+        <h3>Texto 2</h3>
+        Mondstadt é uma das sete nações de Teyvat, e a primeira nação em que o Viajante começa a busca por seu irmão(a). 
+        É a nação que venera Barbatos, o Arconte Anemo e Deus da Liberbade.
+      </div>
+
+      <!-- Texto 3 -->
+
+      <div [style.display]="select.value == 'texto3' ? 'block' : 'none'">
+        <h3>Texto 3</h3>
+        Sumeru é uma das sete nações de Teyvat. É a nação que venera a Lorde Menor Kusanali, atual Arconte Dendro e Deusa da 
+        Sabedoria. É reconhecida como centro do aprendizado acadêmico e abriga a Academia Sumeru.
+      </div>
+
+      <!-- Texto 4 -->
+
+      <div [style.display]="select.value == 'texto4' ? 'block' : 'none'">
+        <h3>Texto 4</h3>
+        Liyue é uma das sete nações de Teyvat. É a nação que venera Morax, o Arconte Geo e Deus dos Contratos.
+      </div>
+
+    </div>
+    
+  </article>
